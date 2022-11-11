@@ -10,7 +10,9 @@ function loopMe() {
     document.getElementById("output").innerHTML = "";
 
     if (eingabe === 0) {
-        document.getElementById("output").innerHTML = "ERROR"
+        document.getElementById("output").innerHTML = "ERROR";
+        document.getElementById("output").style.color = "red";
+        return;
     }
     else if (eingabe % 2 === 0) {
         for (let i = 1; i <= eingabe; i++) {
@@ -18,6 +20,7 @@ function loopMe() {
         }
 
         document.getElementById("output").innerHTML = `L${loopArray.join("")}p`;
+        document.getElementById("output").style.color = "green";
     } else {
         for (let i = 1; i <= eingabe; i++) {
             if (i % 2 === 0) {
@@ -28,5 +31,6 @@ function loopMe() {
         }
 
         document.getElementById("output").innerHTML = `L${loopArray.join("")}p`;
+        document.getElementById("output").style.color = "green";
     }
 }
